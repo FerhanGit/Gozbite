@@ -1,0 +1,39 @@
+* { margin: 0; padding: 0; } /* Reset stuff */
+
+
+ul#reg-menu {
+	width: 280px; margin: 30px auto;
+	list-style: none;
+}
+
+ul#reg-menu li { display: inline; }
+	
+ul#reg-menu li a {
+	display: block; float: left; height: 70px;
+	background-image: url(../images/reg_menu-sprite.png); text-indent: -9999px;
+}
+
+	ul#reg-menu li a.reg_userLi {
+		width: 140px; background-position: 0 0;	
+	}
+	
+	ul#reg-menu li a.reg_firmLi {
+		width: 140px; background-position: -140px 0;	
+	}
+	
+
+	
+	
+	ul#reg-menu li a.reg_userLi:hover, ul#reg-menu li a.reg_userLi:focus {
+		background-position: 0 -70px;	
+	}
+	
+
+	ul#reg-menu li a.reg_firmLi:hover, ul#reg-menu li a.reg_firmLi:focus {
+		background-position: -140px -70px;	
+	}
+	
+	
+	
+
+a { outline: none; }

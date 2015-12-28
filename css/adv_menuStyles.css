@@ -1,0 +1,60 @@
+* { margin: 0; padding: 0; } /* Reset stuff */
+
+
+ul#awesome-menu_adv {
+	width: 600px; margin: 0px auto;
+	list-style: none;
+}
+
+ul#awesome-menu_adv li { display: inline; }
+	
+ul#awesome-menu_adv li a {
+	display: block; float: left; height: 50px;
+	background-image: url(../images/adv_menu-sprite.png); text-indent: -9999px;
+}
+
+	ul#awesome-menu_adv li a.homeLi {
+		width: 150px; background-position: 0 0;	
+	}
+	
+	ul#awesome-menu_adv li a.offersLi {
+		width: 150px; background-position: -150px 0;	
+	}
+	
+	ul#awesome-menu_adv li a.tripsLi {
+		width: 150px; background-position: -300px 0;	
+	}
+	
+	ul#awesome-menu_adv li a.hotelsLi {
+		width: 150px; background-position: -450px 0;	
+	}
+	
+	
+	
+	
+	
+	
+	ul#awesome-menu_adv li a.homeLi:hover, ul#awesome-menu_adv li a.homeLi:focus {
+		background-position: 0 -50px;	
+	}
+	
+
+	ul#awesome-menu_adv li a.offersLi:hover, ul#awesome-menu_adv li a.offersLi:focus {
+		background-position: -150px -50px;	
+	}
+	
+	ul#awesome-menu_adv li a.tripsLi:hover, ul#awesome-menu_adv li a.tripsLi:focus {
+		background-position: -300px -50px;	
+	}
+	
+	ul#awesome-menu_adv li a.hotelsLi:hover, ul#awesome-menu_adv li a.hotelsLi:focus {
+		background-position: -450px -50px;	
+	}
+	
+	
+	
+	
+	
+	
+
+a { outline: none; }

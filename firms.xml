@@ -1,0 +1,670 @@
+<largo>   
+    <firms>
+        <name>Еди Турс ООД</name>
+        <email>floorer@gbg.bg</email>
+    </firms>  
+    <firms>
+        <name>Загора Фрукт АД</name>
+        <email>zfmarket@zagorafruit.com</email>
+    </firms>
+    <firms>
+        <name>Олинеза ООД</name>
+        <email>office@olinezza.com</email>
+    </firms>
+    <firms>
+        <name>Есе-Кекс ООД</name>
+        <email>ece.caix@gmail.com</email>
+    </firms>
+    <firms>
+        <name>Еурофрио</name>
+        <email>i_doytchev@hotmail.com</email>
+    </firms>
+    <firms>
+        <name>1001 Торти ЕООД</name>
+        <email>1001torti@mail.bg</email>
+    </firms>
+    <firms>
+        <name>МариБор</name>
+        <email>maribor_1991@yahoo.com</email>
+    </firms>
+    <firms>
+        <name>Ибеко ООД</name>
+        <email>info@ibeco.bg</email>
+    </firms>
+    <firms>
+        <name>АЛФА6000</name>
+        <email>ivelin6000@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Маке – Юлия Василева ЕТ</name>
+        <email>make_jv@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Авко Релакс</name>
+        <email>office@avko.bg</email>
+    </firms>
+    <firms>
+        <name>Хотел-ресторант Астра - Приморско</name>
+        <email>astra@gbg.bg</email>
+    </firms>
+    <firms>
+        <name>Комплекс Левента</name>
+        <email>info@leventa-bg.net</email>
+    </firms>
+    <firms>
+        <name>Страноприемница &amp;quot;Дедо Пене&amp;quot;</name>
+        <email>mail@dedopene.com</email>
+    </firms>
+    <firms>
+        <name>Ресторант Сакаръ</name>
+        <email>sakar@sakar-marsilia.com</email>
+    </firms>
+    <firms>
+        <name>Ресторант Ревю - София</name>
+        <email>rewiev@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Палункина Механа</name>
+        <email>elen_s2000@yahoo.com</email>
+    </firms>
+    <firms>
+        <name>Уго ООД</name>
+        <email>pizzaugo@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Приятелска среща</name>
+        <email>valiapi@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Ресторант-градина Марково</name>
+        <email>manager@restorantmarkovo.com</email>
+    </firms>
+    <firms>
+        <name>Бар и грил XXL</name>
+        <email>restaurantxxl@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Бар на края на вселената</name>
+        <email>vselenata@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Билбо Бегинс</name>
+        <email>bilbobaggins@mail.bg</email>
+    </firms>
+    <firms>
+        <name>Бялата къща</name>
+        <email>white_house@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Национална ротисерия Цар Иван Асен II</name>
+        <email>rotiseria@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Рио - истинският бразилски ресторант</name>
+        <email>rio_restaurant@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Хотел Моравско село</name>
+        <email>mail@amiti.org</email>
+    </firms>
+    <firms>
+        <name>Стек хаус</name>
+        <email>steakhouse@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Стрелец</name>
+        <email>strelletz@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Вайман</name>
+        <email>vaimann@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Горе под стълбата</name>
+        <email>gorepodstulbata@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Тазка</name>
+        <email>jeanchaoul@yahoo.com</email>
+    </firms>
+    <firms>
+        <name>Фланаганс айриш харп</name>
+        <email>flannagans1@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Хотел-ресторант Резиденция</name>
+        <email>rezidencia@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Бистрото</name>
+        <email>bistroto@top.bg</email>
+    </firms>
+    <firms>
+        <name>За Приятели</name>
+        <email>info@zapriateli.com</email>
+    </firms>
+    <firms>
+        <name>Джимис</name>
+        <email>jimmys@jimmys.bg</email>
+    </firms>
+    <firms>
+        <name>Бистро Чарли</name>
+        <email>info@bistrocharlie.com</email>
+    </firms>
+    <firms>
+        <name>Молерова къща</name>
+        <email>molerovakashta@bansko.bg</email>
+    </firms>
+    <firms>
+        <name>Старият Кестен</name>
+        <email>stariatkesten@restaurant.bg</email>
+    </firms>
+    <firms>
+        <name>Хотел-механа Гурко</name>
+        <email>hotel_gurko@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Ресторант Нов Стандарт - София</name>
+        <email>office@newstandard.bg</email>
+    </firms>
+    <firms>
+        <name>Битбъргър</name>
+        <email>reservations@bitburger.com</email>
+    </firms>
+    <firms>
+        <name>Барбекю-ресторант Андромеда</name>
+        <email>andromeda@restaurant.bg</email>
+    </firms>
+    <firms>
+        <name>Чина Уок</name>
+        <email>chinawok@restaurant.bg</email>
+    </firms>
+    <firms>
+        <name>Хотел-ресторант Мена Палас</name>
+        <email>menapalace@restaurant.bg</email>
+    </firms>
+    <firms>
+        <name>Бирария Фенерите - София</name>
+        <email>anita@fenerite.com</email>
+    </firms>
+    <firms>
+        <name>Брезите, София</name>
+        <email>brezite@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Актив Комерс</name>
+        <email>aktive-komers@mail.bg</email>
+    </firms>
+    <firms>
+        <name>Хаджидрагановите къщи</name>
+        <email>info@kashtite.com</email>
+    </firms>
+    <firms>
+        <name>Хотел-ресторант Рибен дар (Маркони-РМ ЕТ) </name>
+        <email>ribendar@mail.bg</email>
+    </firms>
+    <firms>
+        <name>Самекс ЕООД</name>
+        <email>samex@aster.net</email>
+    </firms>
+    <firms>
+        <name>Едно Време</name>
+        <email>reserve@ednovreme.com</email>
+    </firms>
+    <firms>
+        <name>Енотека Уно</name>
+        <email>ristoranteuno@hotmail.com</email>
+    </firms>
+    <firms>
+        <name>Карера</name>
+        <email>restaurantcarrera@abv.bg</email>
+    </firms>
+     <firms>
+        <name>Кривото</name>
+        <email>krivoto2@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Крим</name>
+        <email>restaurantkrim@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Механа Каруцата</name>
+        <email>mehanakarucata@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Тазмания</name>
+        <email>tazmanija@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Тортила флет</name>
+        <email>tortilaflet@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Трикракото пиле</name>
+        <email>trikrakotopile@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Лисица и хрътка</name>
+        <email>fox_hound@abv.bg</email>
+    </firms>
+    <firms>
+        <name>ЖЕС – Жан Димитров ЕТ</name>
+        <email>chez_jean@mail.bg</email>
+    </firms>
+    <firms>
+        <name>Сандра Л.Т. ООД</name>
+        <email>sandra@techno-link.com</email>
+    </firms>
+    <firms>
+        <name>Червената къща</name>
+        <email>red_house@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Амарийн</name>
+        <email>akomalaya@yahoo.com</email>
+    </firms>
+    <firms>
+        <name>Амбър</name>
+        <email>alpi@bol.bg</email>
+    </firms>
+    <firms>
+        <name>Пализ</name>
+        <email>palis@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Панорама Барбекю</name>
+        <email>sofzh@radissonsas.com</email>
+    </firms>
+    <firms>
+        <name>Парчевич клуб</name>
+        <email>kempinski@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Пица Нова</name>
+        <email>pizzanova@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Привилидж</name>
+        <email>privilige@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Пицария Мелницата</name>
+        <email>luben_kostov@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Ресторант-градина Триумф</name>
+        <email>restaurant_triumph@hotmail.com</email>
+    </firms>
+    <firms>
+        <name>Механа Джодис</name>
+        <email>joddies@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Арес и Ко</name>
+        <email>ares_and_ko@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Горублянско ханче</name>
+        <email>hari_popa@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Бай Коце</name>
+        <email>bajkoce@mail.bg</email>
+    </firms>
+    <firms>
+        <name>Ресторант При стария кмет </name>
+        <email>dragni_dragnev@yahoo.com</email>
+    </firms>
+    <firms>
+        <name>Пица-Ресторант Европа</name>
+        <email>evropa@restaurant.bg</email>
+    </firms>
+    <firms>
+        <name>Манастирска магерница</name>
+        <email>p_ivanov@bitex.com</email>
+    </firms>
+    <firms>
+        <name>Кораб - Ресторант Балкан Принцес</name>
+        <email>jeweller@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Капитал ДМ ООД</name>
+        <email>seasons@dobrich.net</email>
+    </firms>
+    <firms>
+        <name>Пано АД</name>
+        <email>restaurantpano@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Конфети</name>
+        <email>reservation@confettibistro.com</email>
+    </firms>
+    <firms>
+        <name>Хотел-Ресторант Таня</name>
+        <email>tanya@restaurant.bg</email>
+    </firms>
+    <firms>
+        <name>Жив-Ко</name>
+        <email>jivco@db.vega.bg</email>
+    </firms>
+    <firms>
+        <name>Eкс Вото  ЕТ</name>
+        <email>skaarj@mail.bg</email>
+    </firms>
+    <firms>
+        <name>Ресторантски комплекс Димят </name>
+        <email>dimiat@mail.bg</email>
+    </firms>
+    <firms>
+        <name>Ресторант Марини </name>
+        <email>merian13@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Ресторант &quot;Казабланка&quot;</name>
+        <email>casablanca@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Зехтинджиева къща</name>
+        <email>zehtindjieva@bansko.bg</email>
+    </firms>
+    <firms>
+        <name>Механа Каменица</name>
+        <email>add67@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Ариес - София</name>
+        <email>aries_restaurant@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Ресторант Българи - София</name>
+        <email>bulgari@rtsonline.net</email>
+    </firms>
+    <firms>
+        <name>Ресторант Приятели - Варна</name>
+        <email>priatelii@mail.bg</email>
+    </firms>
+    <firms>
+        <name>Метеор</name>
+        <email>meteorbg@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Ресторант Апогей (Моби 2000 ЕООД)</name>
+        <email>club_apogei@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Ресторант Грозд - София</name>
+        <email>grozd@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Хотел Зодиак - Самоков</name>
+        <email>zodiak_tour@mail.orbitel.bg</email>
+    </firms>
+    <firms>
+        <name>Ресторант Лучано - София</name>
+        <email>lucianorestaurant@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Пицария Венеция - Варна</name>
+        <email>milex@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Фемили ООД</name>
+        <email>jivko_popov@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Хотел - механа Елените - с. Радуил</name>
+        <email>iana_anto@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Еленска механа - София</name>
+        <email>elenskamehana@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Ресторант Феникс - Слънчев Бряг</name>
+        <email>tanya@restaurant.bg</email>
+    </firms>
+    <firms>
+        <name>Хепи Бар&amp;Грил</name>
+        <email>office@happy.bg</email>
+    </firms>
+    <firms>
+        <name>Битбургер Клуб</name>
+        <email>info@bitburgerclub.com</email>
+    </firms>
+    <firms>
+        <name>Терасите на Андромеда</name>
+        <email>andromed@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Мотел-ресторант Чайка - Враца</name>
+        <email>chaika_hotel@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Хотел-ресторант Владая (Риск-МРМ ООД) </name>
+        <email>clubvladaya@bgnet.bg</email>
+    </firms>
+    <firms>
+        <name>Кимбо</name>
+        <email>mimikimbo@hotmail.com</email>
+    </firms>
+    <firms>
+        <name>Дон Вито</name>
+        <email>office@pizzadonvito.com</email>
+    </firms>
+    <firms>
+        <name>Отвъд aлеятa зад шкафa</name>
+        <email>StanislavRakovski@yahoo.com</email>
+    </firms>
+    <firms>
+        <name>Замъка</name>
+        <email>zamaka@variant6.bg</email>
+    </firms>
+    <firms>
+        <name>Трансимпекс - Лом</name>
+        <email>transimpex_lom@transimpex.bg</email>
+    </firms>
+   <firms>
+        <name>Румакс ООД-Парти Мания</name>
+        <email>rumax@mail.bg</email>
+    </firms>
+    <firms>
+        <name>ЕТ Лотос 1</name>
+        <email>todorlotos1@abv.bg</email>
+    </firms>
+    <firms>
+        <name>ВИП</name>
+        <email>office@vipgunscenter.com</email>
+    </firms>
+    <firms>
+        <name>Geya-92 Ltd</name>
+        <email>office@g-92.com</email>
+    </firms>
+    <firms>
+        <name>Комадорс ООД</name>
+        <email>comadors@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Енигма НП ЕООД</name>
+        <email>dimi_iv@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Дискотека Клеопатра - Монтана</name>
+        <email>cleopatra@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Дискотека Айсберг - Слънчев бряг</name>
+        <email>office@disco.bg</email>
+    </firms>
+    <firms>
+        <name>Боло Клуб</name>
+        <email>imo_real@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Бар Ексайт</name>
+        <email>info@bar-excite.com</email>
+    </firms>
+    <firms>
+        <name>Дискотека Ориндж</name>
+        <email>orange@disco.bg</email>
+    </firms>
+    <firms>
+        <name>Бекграунд пъб</name>
+        <email>backgroundpub@abv.bg</email>
+    </firms>
+    <firms>
+        <name>БИАД</name>
+        <email>biad@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Стейдсайд</name>
+        <email>stateside@stateside.org</email>
+    </firms>
+    <firms>
+        <name>Дартс клуб</name>
+        <email>darts_club@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Бар Спирит</name>
+        <email>contacts@bar-spirit.com</email>
+    </firms>
+    <firms>
+        <name>Уно</name>
+        <email>unosofia@bgnet.bg</email>
+    </firms>
+    <firms>
+        <name>Клуб Енигма - София</name>
+        <email>clubenigma@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Минимакс Комплекс</name>
+        <email>info@minimaxcomplex.com</email>
+    </firms>
+    <firms>
+        <name>Ел Корасон</name>
+        <email>elcorazon@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Кафе-бар &quot;Segafredo&quot;</name>
+        <email>priatelii@mail.bg</email>
+    </firms>
+    <firms>
+        <name>Табако</name>
+        <email>tabaco@mail.bg</email>
+    </firms>
+    <firms>
+        <name>Луна</name>
+        <email>lunata@gbg.bg</email>
+    </firms>
+    <firms>
+        <name>Денс Клуб Мания</name>
+        <email>dtuhchiev@danceclubmania.com</email>
+    </firms>
+    <firms>
+        <name>Антре</name>
+        <email>office@clubantre.com</email>
+    </firms>
+    <firms>
+        <name>Дискотека Лазур</name>
+        <email>info@discolazur.com</email>
+    </firms>
+    <firms>
+        <name>Клуб Окото</name>
+        <email>pet5@yellowpages-bg.com</email>
+    </firms>
+    <firms>
+        <name>Клуб Стейтсайд</name>
+        <email>stateside@stateside.org</email>
+    </firms>
+    <firms>
+        <name>Чил Аут Кафе</name>
+        <email>cafe@chilloutbg.com</email>
+    </firms>
+    <firms>
+        <name>Диамант - София</name>
+        <email>gbotev_co@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Ъндърграунд</name>
+        <email>pstoychev@diplomat.bg</email>
+    </firms>
+    <firms>
+        <name>Комплекс Авеню</name>
+        <email>complexavenue@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Кафе-бар</name>
+        <email>ambriel@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Клуб Друм</name>
+        <email>drum@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Ди Модуло</name>
+        <email>dimodulo2005@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Виза клуб</name>
+        <email>visabg@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Руж - Bar &amp;amp; Dinner</name>
+        <email>angelsl@hotmail.com</email>
+    </firms>
+    <firms>
+        <name>Брейнуер</name>
+        <email>brainware@intech.bg</email>
+    </firms>
+    <firms>
+        <name>Страноприемница &amp;quot;Дедо Пене&amp;quot;</name>
+        <email>mail@dedopene.com</email>
+    </firms>
+    <firms>
+        <name>Биляна – Фойерверк ЕТ</name>
+        <email>swetozar@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Диско.Бг ООД</name>
+        <email>office@restaurant.bg</email>
+    </firms>
+   <firms>
+        <name>Парти Вега</name>
+        <email>mkrastev@yahoo.com</email>
+    </firms>
+    <firms>
+        <name>Екшън Аквапарк</name>
+        <email>office@aquapark.bg</email>
+    </firms>
+    <firms>
+        <name>Канку-кай</name>
+        <email>kyokushin@kankukai.org</email>
+    </firms>
+    <firms>
+        <name>Коколандия</name>
+        <email>office@kokolandia.com</email>
+    </firms>
+    <firms>
+        <name>Асико ООД, София</name>
+        <email>office@assiko.com</email>
+    </firms>
+    <firms>
+        <name>Коктейл бар Кариби - София</name>
+        <email>karibi_bar@abv.bg</email>
+    </firms>
+   <firms>
+        <name>Какао - дневно кафе</name>
+        <email>cacao@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Горица-Димитър Митев ЕТ</name>
+        <email>galina_georgieva@abv.bg</email>
+    </firms>
+    <firms>
+        <name>Клуб Адреналин</name>
+        <email>adrenalin@bungy.bg</email>
+    </firms>
+    <firms>
+        <name>Арт клуб</name>
+        <email>artclub@abv.bg</email>
+    </firms>   
+</largo>

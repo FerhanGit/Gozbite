@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map_data>
+<config
+	text_color="0xffffff" bold="true"
+	font_size = "18"
+	glow_color="0x333333"
+	contours_color = "0xffffff"
+	name_prefix = "област "
+	name_suffix = ""
+	childs_name_prefix = "град "
+	childs_name_suffix = ""
+/>
+
+<bulgaria>
+	<district id="5">
+		<name>Видин</name>
+		<color>0x0099ff</color>
+		<over_color>0x0099ff</over_color>
+		<child id="77" x="47.5" y="26.9" />
+	</district>
+	
+	<district id="12">
+		<name>Монтана</name>
+		<color>0x0099ff</color>
+		<over_color>0x0099ff</over_color>
+		<child id="177" x="77.2" y="85.3" />
+	</district>
+	
+	<district id="6">
+		<name>Враца</name>
+		<color>0x0099ff</color>
+		<over_color>0x0099ff</over_color>
+		<child id="78" x="100.8" y="105.6" />
+	</district>
+	
+	<district id="15">
+		<name>Плевен</name>
+		<color>0x0099ff</color>
+		<over_color>0x0099ff</over_color>
+		<child id="201" x="181.8" y="96.3" />
+	</district>
+	
+	<district id="4">
+		<name>Велико Търново</name>
+		<color>0x0099ff</color>
+		<over_color>0x0099ff</over_color>
+		<child id="72" x="253.1" y="131.7" />
+	</district>
+	
+	<district id="18">
+		<name>Русе</name>
+		<color>0x0099ff</color>
+		<over_color>0x0099ff</over_color>
+		<child id="223" x="283.4" y="61.5" />
+	</district>
+	
+	<district id="25">
+		<name>Търговище</name>
+		<color>0x0099ff</color>
+		<over_color>0x0099ff</over_color>
+		<child id="269" x="321.3" y="116.8" />
+	</district>
+	
+	<district id="17">
+		<name>Разград</name>
+		<color>0x0099ff</color>
+		<over_color>0x0099ff</over_color>
+		<child id="213" x="321.3" y="85.4" />
+	</district>
+	
+	<district id="19">
+		<name>Силистра</name>
+		<color>0x0099ff</color>
+		<over_color>0x0099ff</over_color>
+		<child id="235" x="372.9" y="31.2" />
+	</district>
+	
+	<district id="8">
+		<name>Добрич</name>
+		<color>0x0099ff</color>
+		<over_color>0x0099ff</over_color>
+		<child id="102" x="420.4" y="83.8" />
+	</district>
+	
+	<district id="3">
+		<name>Варна</name>
+		<color>0x0099ff</color>
+		<over_color>0x0099ff</over_color>
+		<child id="70" x="416.2" y="127.0" />
+	</district>
+	
+	<district id="27">
+		<name>Шумен</name>
+		<color>0x0099ff</color>
+		<over_color>0x0099ff</over_color>
+		<child id="289" x="352.9" y="109.6" />
+	</district>
+	
+	<district id="2">
+		<name>Бургас</name>
+		<color>0x0099ff</color>
+		<over_color>0x0099ff</over_color>
+		<child id="66" x="394.1" y="203.2" />
+	</district>
+	
+	<district id="28">
+		<name>Ямбол</name>
+		<color>0x0099ff</color>
+		<over_color>0x0099ff</over_color>
+		<child id="293" x="316.4" y="195.8" />
+	</district>
+	
+	<district id="20">
+		<name>Сливен</name>
+		<color>0x0099ff</color>
+		<over_color>0x0099ff</over_color>
+		<child id="239" x="304.1" y="174.8" />
+	</district>
+	
+	<district id="26">
+		<name>Хасково</name>
+		<color>0x0099ff</color>
+		<over_color>0x0099ff</over_color>
+		<child id="274" x="246.9" y="250.6" />
+	</district>
+	
+	<district id="24">
+		<name>Стара Загора</name>
+		<color>0x0099ff</color>
+		<over_color>0x0099ff</over_color>
+		<child id="250" x="254.8" y="199.4" />
+	</district>
+	
+	<district id="9">
+		<name>Кърджали</name>
+		<color>0x0099ff</color>
+		<over_color>0x0099ff</over_color>
+		<child id="154" x="232.8" y="282.8" />
+	</district>
+	
+	<district id="16">
+		<name>Пловдив</name>
+		<color>0x0099ff</color>
+		<over_color>0x0099ff</over_color>
+		<child id="202" x="184.4" y="231.8" />
+	</district>
+	
+	<district id="7">
+		<name>Габрово</name>
+		<color>0x0099ff</color>
+		<over_color>0x0099ff</over_color>
+		<child id="83" x="231.3" y="153.6" />
+	</district>
+	
+	<district id="11">
+		<name>Ловеч</name>
+		<color>0x0099ff</color>
+		<over_color>0x0099ff</over_color>
+		<child id="159" x="191.0" y="119.5" />
+	</district>
+	
+	<district id="22">
+		<name>София Област</name>
+		<color>0x0099ff</color>
+		<over_color>0x0099ff</over_color>
+	</district>
+	
+	<district id="13">
+		<name>Пазарджик</name>
+		<color>0x0099ff</color>
+		<over_color>0x0099ff</over_color>
+		<child id="194" x="147.5" y="224.5" />
+	</district>
+	
+	<district id="21">
+		<name>Смолян</name>
+		<color>0x0099ff</color>
+		<over_color>0x0099ff</over_color>
+		<child id="242" x="184.3" y="282.2" />
+	</district>
+	
+	<district id="1">
+		<name>Благоевград</name>
+		<color>0x0099ff</color>
+		<over_color>0x0099ff</over_color>
+		<child id="49" x="63.5" y="247.8" />
+	</district>
+	
+	<district id="10">
+		<name>Кюстендил</name>
+		<color>0x0099ff</color>
+		<over_color>0x0099ff</over_color>
+		<child id="155" x="31.1" y="202.4" />
+	</district>
+	
+	<district id="14">
+		<name>Перник</name>
+		<color>0x0099ff</color>
+		<over_color>0x0099ff</over_color>
+		<child id="196" x="55.5" y="167.4" />
+	</district>
+	
+	<district id="246">
+		<name>София Град</name>
+		<color>0x0099ff</color>
+		<over_color>0x0099ff</over_color>
+	</district>
+</bulgaria>
+
+</map_data>

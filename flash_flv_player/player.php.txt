@@ -1,0 +1,4 @@
+<embed src="http://www.myfileserver.com/folder/mediaplayer.swf" width="300" height="200" bgcolor="#FFFFFF"
+type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" 
+flashvars="file=http://www.myfileserver.com/folder/playlist.xml&autostart=true" />
+

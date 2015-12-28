@@ -1,0 +1,229 @@
+a {
+	font-family:  Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #FF0000;
+	text-decoration: none;
+	letter-spacing: 0.3px
+}
+
+html {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FF0000;
+	
+}
+.bgtop {
+	background-repeat: repeat-x;
+	background-position: top;
+}
+a:hover {
+	font-family:  Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #FF8400;
+	text-decoration: none;
+}
+
+a.orange:hover {
+	font-family:  Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FF0000;
+	text-decoration: none;
+}
+
+
+a.orange {
+	font-family:  Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FF8400;
+	text-decoration: none;
+}
+.block_hdr {
+	font-family:  Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FF0000;
+	text-decoration: none;
+}
+.news_scroll {
+	font-family:  Arial, Helvetica, sans-serif;
+	font-size: 10px;
+		font-weight: bold;
+	color: #FF0000;
+	text-decoration: none;
+}
+
+
+img {
+	border: none;
+}
+.tah10 {
+	font-family: Tahoma;
+	font-size: 10px;
+	text-decoration: none;
+	color: #000000;
+}
+.tah11 {
+	font-family: Tahoma;
+	font-size: 11px;
+	text-decoration: none;
+	color: #000000;
+}
+.ver10 {
+	font-family:  Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	text-decoration: none;
+	color: #000000;
+}
+.ver11 {
+	font-family:  Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	text-decoration: none;
+	color: #000000;
+}
+.tah9 {
+	font-family: Tahoma;
+	font-size: 9px;
+	text-decoration: none;
+	color: #000000;
+}
+.ver9 {
+	font-family:  Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	text-decoration: none;
+	color: #000000;
+}
+td {
+	vertical-align: top;
+}
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+
+
+.newsbgclass{
+width: 400px;
+padding: 5px;
+background-color: #F3F3F3;
+border: 1px solid black;
+margin-bottom: 1em;
+filter:progid:DXImageTransform.Microsoft.alpha(opacity=80); /*Specify fade effect in IE. Remove if desired.*/
+-moz-opacity: 0.8; /*Specify fade effect in Firefox. Remove if desired.*/
+}
+
+.newsbgclass a{
+text-decoration: none;
+}
+
+
+.rsstitle{ /*shared class for all title elements in an RSS feed*/
+font-weight: bold;
+}
+
+.rssdate{ /*shared class for all date elements in an RSS feed*/
+color: gray;
+font-size: 85%;
+}
+
+.rssdescription{ /*shared class for all description elements in an RSS feed*/
+}
+
+a.blue:hover {
+	font-family:  Arial, Helvetica, sans-serif;
+	
+	font-weight: bold;
+	color: #FF0000;
+	text-decoration: none;
+}
+
+a.blue {
+	font-family:  Arial, Helvetica, sans-serif;
+	
+	font-weight: bold;
+	color: #FF8400;
+	text-decoration: none;
+}
+
+
+.halfmoon{
+margin-bottom: 1em;
+}
+
+.halfmoon ul{
+padding: 0px;
+list-style-type: none;
+
+}
+
+.halfmoon li{
+display: inline;
+}
+
+.halfmoon li a{
+text-decoration: none;
+padding: 5px 5px 0px 5px;
+margin: 0px;
+
+
+}
+
+
+.halfmoon li a:hover{
+
+}
+
+.halfmoon li.selected a{
+color:#FF9900;
+
+}
+
+.halfmoon li a:active{
+color:#FF6600;
+
+}
+
+.halfmoon li a.active{
+color:#FF6600;
+
+}
+
+
+/* ######### Style for Drop Down Menu ######### */
+
+.dropmenudiv_e{
+position:absolute;
+top: 0;
+border: 1px dotted #657f27; /*THEME CHANGE HERE*/
+border-width: 0 1px;
+line-height:14px;
+z-index:100;
+background-color: #FFB12B;
+width: 120px;
+visibility: hidden;
+margin-left: 5px;
+}
+
+
+.dropmenudiv_e a{
+width: auto;
+display: block;
+border: 0 solid #657f27; /*THEME CHANGE HERE*/
+border-bottom-width: 1px;
+
+}
+
+* html .dropmenudiv_e a{ /*IE only hack*/
+width: 100%;
+}
+
+.dropmenudiv_e a:hover{ /*THEME CHANGE HERE*/
+background-color:#A7DDF8;
+}
+

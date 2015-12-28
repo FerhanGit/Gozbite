@@ -1,0 +1,19 @@
+Installation started 2014-11-14 17:07:01
+Attempting to connect to database gozbetr3_openx with user gozbetr3_gozbite
+Connected to database gozbetr3_openx
+Database settings and permissions are OK
+creating upgrade_action audit table
+successfully created upgrade_action audit table
+creating database_action audit table
+successfully created database_action audit table
+schema definition from cache TRUE
+Installation created the core tables
+Installation updated the schema version to 607
+Installation updated the application version to 2.8.1
+Preparing to set timezone preference...
+#! Error getting the admin account ID
+#! Ignoring above error when getting the admin account ID - installing, so not yet required
+Preparing to set timezone preference...
+Found timezone preference ID of 16
+Found the admin account's timezone association, updating preference...
+Updated the admin account timezone preference to: 'Europe/Sofia'

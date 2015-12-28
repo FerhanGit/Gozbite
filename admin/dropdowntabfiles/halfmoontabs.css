@@ -1,0 +1,64 @@
+.halfmoon{
+margin-bottom: 1em;
+}
+
+.halfmoon ul{
+padding: 0px;
+list-style-type: none;
+
+}
+
+.halfmoon li{
+display: inline;
+}
+
+.halfmoon li a{
+text-decoration: none;
+padding: 5px 5px 0px 5px;
+margin: 0px;
+
+
+}
+
+
+.halfmoon li a:hover{
+
+}
+
+.halfmoon li.selected a{
+color:#FF9900;
+
+}
+
+
+/* ######### Style for Drop Down Menu ######### */
+
+.dropmenudiv_e{
+position:absolute;
+top: 0;
+border: 1px dotted #657f27; /*THEME CHANGE HERE*/
+border-width: 0 1px;
+line-height:14px;
+z-index:100;
+background-color: #FFB12B;
+width: 120px;
+visibility: hidden;
+margin-left: 5px;
+}
+
+
+.dropmenudiv_e a{
+width: auto;
+display: block;
+border: 0 solid #657f27; /*THEME CHANGE HERE*/
+border-bottom-width: 1px;
+
+}
+
+* html .dropmenudiv_e a{ /*IE only hack*/
+width: 100%;
+}
+
+.dropmenudiv_e a:hover{ /*THEME CHANGE HERE*/
+background-color:#A7DDF8;
+}

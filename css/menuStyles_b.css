@@ -1,0 +1,86 @@
+* { margin: 0; padding: 0; } /* Reset stuff */
+
+
+ul#awesome-menu {
+	width: 1000px; margin: 80px auto;
+	list-style: none;
+}
+
+ul#awesome-menu li { display: inline; }
+	
+ul#awesome-menu li a {
+	display: block; float: left; height: 45px;
+	background-image: url(../images/menu_n2.png); text-indent: -9999px;
+}
+
+	ul#awesome-menu li a.homeLi {
+		width: 143px; background-position: 0 0;	
+	}
+		
+	ul#awesome-menu li a.recipesLi {
+		width: 143px; background-position: -143px 0;	
+	}
+		
+	ul#awesome-menu li a.postsLi {
+		width: 143px; background-position: -286px 0;	
+	}
+		
+	ul#awesome-menu li a.drinksLi {
+		width: 143px; background-position: -429px 0;	
+	}
+	
+	ul#awesome-menu li a.guideLi {
+		width: 143px; background-position: -572px 0;	
+	}
+	
+	ul#awesome-menu li a.firmsLi {
+		width: 143px; background-position: -715px 0;	
+	}
+	
+	ul#awesome-menu li a.forumLi {
+		width: 142px; background-position: -857px 0;	
+	}
+	
+	
+	
+	ul#awesome-menu li a.homeLi:hover, ul#awesome-menu li a.homeLi:focus {
+		background-position: 0 -45px;	
+	}
+	
+
+	ul#awesome-menu li a.recipesLi:hover, ul#awesome-menu li a.recipesLi:focus {
+		background-position: -143px -45px;	
+	}
+	
+	
+	ul#awesome-menu li a.postsLi:hover, ul#awesome-menu li a.postsLi:focus {
+		background-position: -286px -45px;	
+	}
+	
+	
+	ul#awesome-menu li a.drinksLi:hover, ul#awesome-menu li a.drinksLi:focus {
+		background-position: -429px -45px;	
+	}
+	
+	
+	ul#awesome-menu li a.guideLi:hover, ul#awesome-menu li a.guideLi:focus {
+		background-position: -572px -45px;	
+	}
+	
+
+	ul#awesome-menu li a.firmsLi:hover, ul#awesome-menu li a.firmsLi:focus {
+		background-position: -715px -45px;	
+	}
+	
+
+    ul#awesome-menu li a.forumLi:hover, ul#awesome-menu li a.forumLi:focus {
+		background-position: -857px -45px;	
+	}
+	
+	
+	
+
+	
+	
+a { outline: none; }
+	

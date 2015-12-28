@@ -1,0 +1,337 @@
+<?php
+// $Id: openx.module,v 1.7.2.4 2008/04/14 11:15:05 jaydub Exp $
+
+/**
+ * @file
+ * Integrates Drupal with OpenX Ad server
+ *
+ * Allows users to integerate Drupal with the OpenX Ad server
+ *
+ * Created on 12.01.2007
+ *
+ * @author Gerd Riesselmann
+ * @author Jeff Warrington (jaydub) is new maintainer March 2008
+ * @author Chris Nutting <Chris.Nutting@openx.org>
+ *
+ */
+
+/**
+ * Administration hooks
+ */
+
+/**
+ * Implementation of hook_theme().
+ */
+function openx_theme() {
+    return array(
+        'openx_admin_settings_form' => array('arguments' => array('form')),
+        'openx_block' => array('arguments' => array('index')),
+        'openx_channel' => array('arguments' => array()),
+        'openx_invoke' => array('arguments' => array('zoneid', 'code')),
+    );
+}
+
+/**
+ * Implementation of hook_help().
+ */
+function openx_help($section, $arg = null)
+{
+    switch ($section) {
+    case 'admin/help#openx':
+    case 'admin/modules#description':
+        return t('<p>The OpenX module allows site administrators to integrate Drupal with the OpenX adserver.
+                     OpenX ad zones that are configured to be used in with openx module can be shown anywhere
+                     in a theme directly using a function call or via Drupal blocks which are automatically
+                     created for each OpenX ad zone. Additional information regarding OpenX can be found at the
+                     <a href="!openx-site">OpenX website</a>.</p>', array('!openx-site' => 'http://www.openx.org'));
+    }
+}
+
+/**
+ * Implementation of hook_menu().
+ */
+function openx_menu($may_cache = false)
+{
+    $items = array();
+
+    $items['admin/settings/openx'] = array(
+        'title' => 'OpenX (openx) adserver configuration',
+        'description' => 'Configure OpenX (openx) AdServer integration behavior and appearance.',
+        'page callback' => 'drupal_get_form',
+        'page arguments' => array('openx_admin_settings'),
+        'access callback' => 'user_access',
+        'access arguments' => array('administer site configuration'),
+        'type' => MENU_NORMAL_ITEM, // optional
+    );
+    return $items;
+}
+
+/**
+ * Implemenation of hook_settings().
+ */
+function openx_admin_settings()
+{
+    $form = array();
+
+    $form['openx_num_zones'] = array(
+        '#type' => 'textfield',
+        '#default_value' => variable_get('openx_num_zones', 3),
+        '#title' => t('How many OpenX zones (blocks) do you wish to display?'),
+        '#size' => 6,
+    );
+
+    $form['openx_zones'] = array(
+        '#theme' => 'openx_admin_settings_form',
+        '#type' => 'fieldset',
+        '#title' => t('Setup the OpenX Zones you wish to display on your site '),
+        '#description' => t("<ul>
+            <li>The zone id can be found in the OpenX administration interface.</li>
+            <li>The name can be any alpha-numeric string, this will be used for the block name.</li>
+            <li>For each user role, you can either show (checked) or hide (unchecked) the ad of the according zone</li>
+            <li><strong><em>If you are using your own OpenX installation, set the delivery URL in the section below</em></strong></li>
+        </ul>
+        Once you have configured your zones, you can invoke them within your templates using either the
+        index number (0-2, for example, this is the first column) or by the names you gave your zones
+        The according code is <strong>&lt;?php echo openx_invoke('my zone name');&gt;</strong>"),
+        '#collapsible' => true,
+        '#collapsed' => false,
+    );
+
+    $zones = _openx_get_zones();
+    $roles = user_roles();
+    $i = 0;
+    foreach ($zones as $zone) {
+        $form['openx_zones'][$i]['openx_zones_id_'. $i] = array(
+            '#type' => 'textfield',
+            '#default_value' => $zone['id'],
+            '#size' => 6,
+        );
+        $form['openx_zones'][$i]['openx_zones_name_'. $i] = array(
+            '#type' => 'textfield',
+            '#default_value' => $zone['name'],
+            '#size' => 20,
+        );
+
+        foreach ($roles as $key => $display) {
+            $element_key = 'openx_zones_roles_'. $key .'_'. $i;
+            $form['openx_zones'][$i][$element_key] = array(
+                '#type' => 'checkbox',
+                '#default_value' => $zone['roles'][$key],
+            );
+        }
+        $i++;
+    }
+
+    $form['adserver'] = array(
+        '#type' => 'fieldset',
+        '#title' => t('Don\'t have a hosted account? Use your existing OpenX installation?'),
+        '#description' => t('These settings are located on your OpenX server at <strong>Settings -> Main Settings -> Delivery Settings</strong><br />...or leave blank to use an OpenX hosted account'),
+        '#collapsible' => true,
+        '#collapsed' => true,
+    );
+    $form['adserver']['openx_delivery_url'] = array(
+        '#type' => 'textfield',
+        '#default_value' => variable_get('openx_delivery_url', ''),
+        '#title' => t('OpenX delivery url'),
+        '#description' => t('For example "ads.example.org/delivery". "http://" is automatically prefixed.'),
+        '#required' => false,
+    );
+    $form['adserver']['openx_delivery_url_https'] = array(
+        '#type' => 'textfield',
+        '#default_value' => variable_get('openx_delivery_url_https', ''),
+        '#title' => t('OpenX https delivery url'),
+        '#description' => t('For example "ads.example.org/delivery". "https://" is automatically prefixed.')
+    );
+    return system_settings_form($form);
+}
+
+/**
+ * Theme function for the admin settings form
+ */
+function theme_openx_admin_settings_form($form) {
+    $roles = user_roles();
+    foreach ($form as $name => $element) {
+        $id_col = "openx_zones_id_$name";
+
+        $name_col = "openx_zones_name_$name";
+        if (isset($element[$id_col]) && is_array($element[$id_col])) {
+            $arr = array(
+                check_plain($name),
+                drupal_render($element[$id_col]),
+                drupal_render($element[$name_col]),
+            );
+            foreach ($roles as $key => $rolename) {
+                $element_key = 'openx_zones_roles_'. $key .'_'. $name;
+                $arr[] = drupal_render($element[$element_key]);
+            }
+            $rows[] = $arr;
+        }
+    }
+
+    $header = array(t('Index'), t('Zone ID'), t('Block name'));
+    foreach ($roles  as $key => $rolename) {
+        $header[] = $rolename;
+    }
+    $output .= theme('table', $header, $rows);
+
+    return $output;
+}
+
+/**
+ * Implementation of hook_block().
+ */
+function openx_block($op = 'list', $delta = 0, $edit = array())
+{
+    if ($op == 'list') {
+        $zones = _openx_get_zones();
+        foreach ($zones as $index => $zone) {
+            if ($zone['id']) {
+                $blocks[$index] = array(
+                    'info' => t('OpenX Zone '. $zone['id'] .' ('. ($zone['name'] != '' ? $zone['name'] : 'untitled') .')'),
+                    'weight' => 0,
+                    'enabled' => 0,
+                    'region' => 'left'
+                );
+            }
+        }
+        return $blocks;
+    } else if ($op == 'view') {
+        $block = array(
+            'content' => theme('openx_block', $delta)
+        );
+        return $block;
+    }
+}
+
+/**
+ * Theme function for openx_block()
+ */
+function theme_openx_block($index)
+{
+    return openx_invoke($index);
+}
+
+/**
+ * Delivery hooks
+ */
+
+function openx_init($main = 0)
+{
+    openx_footer($main);
+}
+
+/**
+ * Implement hook_footer to inject our JavaScript
+ */
+function openx_footer($main = 0) {
+    if (!empty($_SERVER['HTTPS'])) {
+        $protocol = 'https';
+        $server = variable_get('openx_delivery_url_https', 'd.openx.org');
+    } else {
+        $protocol = 'http';
+        $server = variable_get('openx_delivery_url', 'd.openx.org');
+    }
+    $url = $protocol . "://" . _openx_trim_path(!empty($server) ? $server : 'd.openx.org') . "spcjs.php";
+
+    $zones = _openx_get_zones();
+    $spcCode = "<script type='text/javascript'><!--// <![CDATA[\n  var OA_zones = {\n";
+
+    $jsZones = array();
+    foreach ($zones as $idx => $zone) {
+        if (!empty($zone['id'])) {
+            $jsZones[] = "    '" . $zone['name'] . "' : " . $zone['id'];
+        }
+    }
+    $spcCode .= implode(",\n", $jsZones);
+    $spcCode .= "  }\n// ]]> --></script>\n<script type='text/javascript' src='{$url}'></script>";
+
+    drupal_set_html_head($spcCode);
+}
+
+/**
+ * Builds the call to OpenX
+ */
+function openx_invoke($index_or_key) {
+    $zone = _openx_get_zone($index_or_key);
+    $id = $zone['id'];
+    $code = $zone['code'];
+    if (empty($id) || empty($zone)) {
+        return '';
+    }
+
+    global $user;
+    foreach ($user->roles as $key => $value) {
+        if (!$zone['roles'][$key]) {
+            return '';
+        }
+    }
+    return theme('openx_invoke', $zone['name'], $code);
+}
+
+/**
+ * Theme function for openx_invoke().
+ */
+function theme_openx_invoke($zoneid, $code)
+{
+  return "<script type='text/javascript'><!--// <![CDATA[
+    OA_show('{$zoneid}');
+// ]]> --></script>";
+}
+
+/**
+ * (Private) utility methods
+ */
+
+/**
+ * Prepare a server path
+ */
+function _openx_trim_path($path) {
+    return trim($path, '/') .'/';
+}
+
+/**
+ * Returns all stored zones
+ */
+function _openx_get_zones() {
+    static $ret = null;
+    if ($ret) {
+        return $ret;
+    }
+
+    $c = variable_get('openx_num_zones', 3);
+    $ret = array();
+    for ($i = 0; $i < $c; $i ++) {
+        $ret[$i]['id'] = variable_get('openx_zones_id_'. $i, null);
+        $ret[$i]['code'] = variable_get('openx_zones_code_'. $i, null);
+        $ret[$i]['name'] = variable_get('openx_zones_name_'. $i, null);
+        if (empty($ret[$i]['name'])) {
+            $ret[$i]['name'] = $ret[$i]['id'];
+        }
+        $ret[$i]['roles'] = array();
+        foreach (user_roles() as $key => $name) {
+            $element_key = 'openx_zones_roles_'. $key .'_'. $i;
+            $ret[$i]['roles'][$key] = variable_get($element_key, true);
+        }
+    }
+    return $ret;
+}
+
+/**
+ * Return zone with given index
+ */
+function _openx_get_zone($index_or_key)
+{
+    $zones = _openx_get_zones();
+    if (isset($zones[$index_or_key])) {
+        return $zones[$index_or_key];
+    } else {
+        foreach ($zones as $zone) {
+            if ($zone['name'] == $index_or_key) {
+                return $zone;
+            }
+        }
+    }
+    return array('id' => false, 'code' => false, 'name' => '', 'roles' => array());
+}
+
+?>
