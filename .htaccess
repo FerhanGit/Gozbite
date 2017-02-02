@@ -1,5 +1,5 @@
 <IfModule mod_env.c>
-        SetEnv PHPRC /home/ohbolibg/public_html/gozbite/php.ini
+	SetEnv PHPRC D:\xampp\php\php.ini
 </IfModule>
 
 
@@ -9,7 +9,7 @@ RewriteEngine On
 
 RewriteBase /
 
-#RewriteRule ^(.*)$ http://gozbite.com/$1 [R=301,L]  
+#RewriteRule ^(.*)$ http://localhost/Gozbite.Com/$1 [R=301,L]  
 
 #Начална Страница
 RewriteRule ^начална-страница,([^-]*)\.html$ /index.php [L] 
@@ -354,4 +354,4 @@ order allow,deny
 allow from all
 </Files>
 
-deny from 15.195.185.78
+#deny from 15.195.185.78

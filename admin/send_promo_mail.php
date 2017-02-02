@@ -6,21 +6,21 @@
 	ini_set('max_execution_time', '5750');
 	header('Content-type: text/html; charset=utf-8');
 
-	
+
 	//**********************//
 		$test = $_GET['test'] ? $_GET['test'] : 0; // Tova go pravim na 1 ako iskame da izpratim samo testovi e-maili
 	//**********************//
 
-	
+
 
 if(isset($_REQUEST['sendMails']))
 {
-	
-	
-	
+
+
+
 	// ============================ UPLOADVA localno Attachmentite i vru6ta ARRAY s putq do tqh =============================
-	
-		if(is_array($_FILES['attachment']) && (count($_FILES['attachment']) > 0)) 
+
+		if(is_array($_FILES['attachment']) && (count($_FILES['attachment']) > 0))
          {
             $files = array();
             foreach ($_FILES['attachment'] as $k => $l) {
@@ -42,100 +42,100 @@ if(isset($_REQUEST['sendMails']))
                  		$attachedFiles[] = $upPic->file_dst_pathname;
                     	$upPic->clean();
                  	}
-                 	           	
-              	}              	   
-           }            	
-		       
+
+              	}
+           }
+
         }
     //============================================================================
 
     $Error = "";
-	
+
       // -------------------------------------- FIRMS FROM XML ------------------------------------------------
 
    $xml = simplexml_load_file("http://gozbite.com/firms.xml");
-	
-	$numMailsSuccessFirms = 0; 
+
+	$numMailsSuccessFirms = 0;
 	$counter = 0;
 	foreach($xml->firms as $firm)
-	{		
+	{
 		$counter++;
 		if($test == 1) {
 			if($counter > 1) {
-				continue; 
+				continue;
 			}
 		}
-			
-		
-		
+
+
+
 		$emailTo = $firm->email;
-		$emailMy = 'office@gozbite.com';
-		
-		
+		$emailMy = 'fismailov@mailjet.com';
+
+
 		error_reporting(E_ALL);
 		//error_reporting(E_STRICT);
-		
+
 		date_default_timezone_set('Europe/Sofia');
 		//date_default_timezone_set(date_default_timezone_get());
-		
+
 		include_once('../includes/classes/phpmailer/class.phpmailer.php');
-		
+
 		$mail             	= new PHPMailer();
 		$mail->CharSet      = "UTF-8";
 		$mail->IsSendmail(); // telling the class to use SendMail transport
 		$mail->Priority = 3;
-		$mail->WordWrap = 100; 
-				
-       	$body = "<img style='border:no;' src='http://gozbite.com/images/logce.png'><br /><br />";			  	
-  		$body .= nl2br($_REQUEST['mailBody']);	
+		$mail->WordWrap = 100;
+
+       	$body = "<img style='border:no;' src='http://gozbite.com/images/logce.png'><br /><br />";
+  		$body .= nl2br($_REQUEST['mailBody']);
 		$body = str_replace('__FIRM__', $resMailsFirms[$z]['firm_name'], $body);
        	$body = eregi_replace("[\]",'',$body);
-			       		
-					
-		$mail->From       = "office@gozbite.com";
-		$mail->FromName   = "Info.GoZbiTe.Com";			
+
+
+		$mail->From       = "fismailov@mailjet.com";
+		$mail->FromName   = "Info.GoZbiTe.Com";
 		//$mail->AddReplyTo("ohboli@ohboli.bg"); // tova moje da go zadadem razli4no ot $mail->From
-		
-		
+
+
 		$mail->Subject    = $_REQUEST['mailTitle'];
 		$mail->AltBody    = "За да видите това писмо, моля използвайте e-mail клиент, който да поддържа визуализацията на HTML съдържание.!"; // optional, comment out and test
 		$mail->MsgHTML($body);
-		
+
 		$mail->ClearAddresses();
 		$mail->AddAddress($emailTo);
 	//	$mail->AddAddress($emailMy);
-		
+
 		$mail->ClearAttachments();
 		if(is_array($attachedFiles))
 		foreach ($attachedFiles as $fileToAttach )
 		{
 			if(is_file($fileToAttach))
    			{
-   				$mail->AddAttachment($fileToAttach);  	   				
+   				$mail->AddAttachment($fileToAttach);
    			}
 	   		//else $Error = $fileToAttach. 'не беше прикачен!';              // attachment
 		}
-		
+
 		if(!$mail->Send()) {
-		  $Error .= "<br />Грешка при изпращане: " . $mail->ErrorInfo; 
+		  $Error .= "<br />Грешка при изпращане: " . $mail->ErrorInfo;
 		} else {
 		  $Error .= "<br /><span>Благодарим Ви!<br />Вашето съобщение е изпратено успешно до $emailTo</span><br />";
 		  $numMailsSuccessFirms++;
 		}
-		
+
 	}
-	
-	$Error .= "\n <font color='red'><br /><br />от XML-a Бяха изпратени ".$numMailsSuccessFirms." писма от общо ".count($xml->firms)." писма</font><p>";	  
+
+	$Error .= "\n <font color='red'><br /><br />от XML-a Бяха изпратени ".$numMailsSuccessFirms." писма от общо ".count($xml->firms)." писма</font><p>";
 	// ----------------------------------------------- END FIRMS FROM XML----------------------------------------------------
 
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
   // -------------------------------------- FIRMS ------------------------------------------------
 
 	if (($_REQUEST['firmCat'] != "") && ($_REQUEST['firmCat'] > 0))
@@ -144,7 +144,7 @@ if(isset($_REQUEST['sendMails']))
 		$conn->setsql($sql);
 		$conn->getTableRows();
 		$numMailsFirms = $conn->numberrows;
-		$resMailsFirms = $conn->result;		
+		$resMailsFirms = $conn->result;
 	}
 	elseif($_REQUEST['firmCat'] == "-1")
 	{
@@ -158,78 +158,78 @@ if(isset($_REQUEST['sendMails']))
 	$numMailsSuccessFirms = 0;
 	$counter = 0;
 	for($z=0; $z < $numMailsFirms; $z++)
-	{		
-			
+	{
+
 		$counter++;
-				
+
 		if($test == 1) {
 			if($counter > 1) {
-				continue; 
+				continue;
 			}
-			
+
             $emailTo = 'floorer@gbg.bg';
 		}
-		
-		
+
+
         $emailTo = $resMailsFirms[$z]['email'];
-		
+
         error_reporting(E_ALL);
 		//error_reporting(E_STRICT);
-		
+
 		date_default_timezone_set('Europe/Sofia');
 		//date_default_timezone_set(date_default_timezone_get());
-		
+
 		include_once('../includes/classes/phpmailer/class.phpmailer.php');
-		
+
 		$mail             	= new PHPMailer();
 		//$body             = $mail->getFile('contents.html');
 		$mail->CharSet      = "UTF-8";
 		$mail->IsSendmail(); // telling the class to use SendMail transport
 		$mail->Priority = 1;
-		$mail->WordWrap = 100; 
-		
-		$body = "<img  style='border:no;' src='http://gozbite.com/images/logce.png'><br /><br />";			  	
-  		$body .= nl2br($_REQUEST['mailBody']);	
+		$mail->WordWrap = 100;
+
+		$body = "<img  style='border:no;' src='http://gozbite.com/images/logce.png'><br /><br />";
+  		$body .= nl2br($_REQUEST['mailBody']);
 		$body = str_replace('__FIRM__', $resMailsFirms[$z]['firm_name'], $body);
        	$body  = eregi_replace("[\]",'',$body);
-		
-					
-		$mail->From       = "office@gozbite.com";
-		$mail->FromName   = "Info.GoZbiTe.Com";			
+
+
+		$mail->From       = "fismailov@mailjet.com";
+		$mail->FromName   = "Info.GoZbiTe.Com";
 		//$mail->AddReplyTo("office@gozbite.com"); // tova moje da go zadadem razli4no ot $mail->From
-		
-		
+
+
 		$mail->Subject    = $_REQUEST['mailTitle'];
 		$mail->AltBody    = "За да видите това писмо, моля използвайте e-mail клиент, който да поддържа визуализацията на HTML съдържание.!"; // optional, comment out and test
 		$mail->MsgHTML($body);
-		
+
 		$mail->ClearAddresses();
 		$mail->AddAddress($emailTo);
-		
+
 		$mail->ClearAttachments();
 		foreach ($attachedFiles as $fileToAttach )
 		{
 			if(is_file($fileToAttach))
    			{
-   				$mail->AddAttachment($fileToAttach);  	   				
+   				$mail->AddAttachment($fileToAttach);
    			}
 	   		else $Error = $fileToAttach. 'не беше прикачен!';              // attachment
 		}
-		
+
 		if(!$mail->Send()) {
-		  $Error .= "<br />Грешка при изпращане: " . $mail->ErrorInfo; 
+		  $Error .= "<br />Грешка при изпращане: " . $mail->ErrorInfo;
 		} else {
 		  $Error .= "<br /><span>Благодарим Ви!<br />Вашето съобщение е изпратено успешно до $emailTo</span><br />";
 		  $numMailsSuccessFirms++;
 		}
-			
+
 	}
-	
-	$Error .= "\n <font color='red'><br /><br />До ФИРМИТЕ от DB Бяха изпратени ".$numMailsSuccessFirms." писма от общо ".$numMailsFirms." писма</font><p>";	  
+
+	$Error .= "\n <font color='red'><br /><br />До ФИРМИТЕ от DB Бяха изпратени ".$numMailsSuccessFirms." писма от общо ".$numMailsFirms." писма</font><p>";
 	// ----------------------------------------------- END FIRMS ----------------------------------------------------
 
-	
-} 
+
+}
 
 
 ?>
@@ -263,15 +263,15 @@ if(isset($_REQUEST['sendMails']))
    <link rel="stylesheet" type="text/css" href="js/niftyCornersN.css">
    <link rel="stylesheet" type="text/css" href="js/niftyPrint.css" media="print">
    <script type="text/javascript" src="js/nifty.js"></script>
-   
-   
+
+
 <script type="text/javascript" src="js/ajaxtabs/ajaxtabs.js"></script>
 <link rel="stylesheet" type="text/css" href="js/ajaxtabs/ajaxtabs.css" />
 
 <script type="text/javascript" src="js/javascripts/window.js"> </script>
 <script type="text/javascript" src="js/javascripts/window_effects.js"> </script>
 <script type="text/javascript" src="js/javascripts/tooltip.js"> </script>
-<link href="themes/default.css" rel="stylesheet" type="text/css" ></link>	
+<link href="themes/default.css" rel="stylesheet" type="text/css" ></link>
 <link href="themes/spread.css" rel="stylesheet" type="text/css" ></link>
 <link href="themes/alphacube.css" rel="stylesheet" type="text/css" ></link>
 
@@ -306,17 +306,17 @@ body {
       }
    </script>
 
-   
+
 </head>
 <body>
 
 <form name = "searchform" method = "POST" action = "send_promo_mail.php"  enctype="multipart/form-data" >
 <input type='hidden' name='MAX_FILE_SIZE' value='4000000'>
-				  
+
 
 <script type="text/javascript">
 window.onload=function(){
-if(!NiftyCheck()) 
+if(!NiftyCheck())
     return;
 Rounded("div#left-2DIV","tr","#E0E0E0","#FFB12B");
 Rounded("div#MAIN","all","#FFF","#F5F5F5");
@@ -331,7 +331,7 @@ Rounded("div.last_posts","tr bl","#FFF","#E7E7E7","big");
 }
 </script>
 
-<script type="text/javascript">		
+<script type="text/javascript">
 new Ajax.PeriodicalUpdater('user_info_test_div', 'test_Proto_Ajax.php', {
   method: 'get', frequency: 3, decay: 2
 });
@@ -353,29 +353,29 @@ function jumpBlank(selObj) {
 
 
 <div id="CONTAINER" style="margin:0px;width:auto; ">
-	
+
   <div id="LEFT-1" style="float:left; width:160px;margin:0px;">
-	  <?php include("index_inc/left-1.php");  ?>  
+	  <?php include("index_inc/left-1.php");  ?>
   </div>
 
 
-  
-  <div id="LEFT-2" style="float:left; width:150px;margin:0px;"> 
-  	  <?php include("index_inc/left-2.php");  ?>  
+
+  <div id="LEFT-2" style="float:left; width:150px;margin:0px;">
+  	  <?php include("index_inc/left-2.php");  ?>
   </div>
-  
-  
+
+
   <div id="CENTER" style="margin-left:0px;">
- 	 <div id="HEADER" style="height:175px; background-image:url(images/header_bgr_green.gif);background-position:top; background-repeat:repeat-x;">          
+ 	 <div id="HEADER" style="height:175px; background-image:url(images/header_bgr_green.gif);background-position:top; background-repeat:repeat-x;">
          <div id="BANER_Goren" style="float:left;padding-top:44px;height:90px;margin-left:30px;">
             <?php include_once("inc/header.inc.php"); ?>
-         </div>    
+         </div>
      </div>
      <div id="BANER_KVADRAT_AND_NEWS"style="float:left; width:650px; margin-left:10px; margin-top:10px;background-color:#F9FFF9;">
-       <?php  include("index_inc/baner-kvadrat.inc.php");  ?>  
+       <?php  include("index_inc/baner-kvadrat.inc.php");  ?>
      </div>
      <div id="MAIN" style="float:left; width:480px; margin:20px; margin-right:10px; background-color:#F5F5F5;" align="left">
-         
+
 		  <?php
 	   if(isset($Error))
 	      printf("<div class = \"error\" style = \"padding: 3px 3px 3px 3px; width: 100%%; border: solid 1px #ca0000; background-color: #ffffff;\">%s</div>", $Error);
@@ -384,11 +384,11 @@ function jumpBlank(selObj) {
    <?php
       print "<legend>&nbsp;Писма | изпращане на спам &nbsp;</legend>\n";
    ?>
-   
-   
-   
-      
-				   
+
+
+
+
+
       <div style = "margin: 10px 10px 10px 10px;">
          <label for = "firmCat">Избери Категория Заведения</label><br>
          <?php
@@ -406,20 +406,20 @@ function jumpBlank(selObj) {
             }
          ?>
       </div>
-      
-                    
-      
+
+
+
       <div style = "margin: 10px 10px 10px 10px;">
       <label for = "mailTitle">Зглавие на писмото</label><br>
       <?php
          printf("<input type = \"text\" id = \"mailTitle\" name = \"mailTitle\" value = \"%s\" size = \"60\"><br><br>\n", $_REQUEST['mailTitle']);
       ?>
       </div>
-      
-      
-       <div style=" margin:10px;margin-left:0px;"> 
-				&nbsp;&nbsp;Текст на писмото: 
-				  <?php 
+
+
+       <div style=" margin:10px;margin-left:0px;">
+				&nbsp;&nbsp;Текст на писмото:
+				  <?php
 				 include_once("../FCKeditor/fckeditor.php");
 		         $oFCKeditor = new FCKeditor('mailBody') ;
 		         $oFCKeditor->BasePath   = "FCKeditor/";
@@ -427,44 +427,44 @@ function jumpBlank(selObj) {
 		         $oFCKeditor->Height     = '300' ;
 		         $oFCKeditor->Value      = $_REQUEST['mailBody'];
 		         $oFCKeditor->Create();
-			?> 
+			?>
 	  </div>
-				   
-				
+
+
       <div style = "margin: 10px 10px 10px 10px;">
 		 <fieldset style="width:200px">
-	        <legend>&nbsp;Прикачи файл&nbsp;</legend>   
+	        <legend>&nbsp;Прикачи файл&nbsp;</legend>
 			<input type = "file" name = "attachment[]" style="margin:10px;float:left;width:200px;">
       		<input type = "file" name = "attachment[]" style="margin:10px;float:left;width:200px;">
       		<input type = "file" name = "attachment[]" style="margin:10px;float:left;width:200px;">
       		<input type = "file" name = "attachment[]" style="margin:10px;float:left;width:200px;">
-      		<input type = "file" name = "attachment[]" style="margin:10px;float:left;width:200px;">      		
+      		<input type = "file" name = "attachment[]" style="margin:10px;float:left;width:200px;">
 	  	</fieldset>
 	  </div>
-	  
-	  
+
+
       <div style = "margin: 10px 10px 10px 10px;">
       <?php
          print "<input type = \"submit\" name = \"sendMails\" value = \"Изпрати писмата\" class = \"buttonInv\">";
       ?>
       </div>
    </fieldset>
-      
+
      </div>
      <div id="RIGHT" style="float:left;margin-left:10px; width:150px;margin-top:20px;">
-        <?php include("index_inc/right.php");  ?>  
-     </div>      
+        <?php include("index_inc/right.php");  ?>
+     </div>
   </div>
-  
+
 </div> <!-- END CONTAINER DIV -->
-   
+
 </form>
 
 <div id="FOOTER" style=" float:left;width:auto; margin-top:20px;">
-	 <?php include("inc/footer.inc.php");  ?>  
+	 <?php include("inc/footer.inc.php");  ?>
 </div>
 
-<script> 
+<script>
   //TooltipManager.addHTML("COLLAPSE_BTN", "collapse_help");
    TooltipManager.addURL("question", "help/collapse_help.html", 200, 300);
 </script>
