@@ -15,7 +15,7 @@ class Log {
 		register_shutdown_function(array(& $this, 'send'));
 	}
 
-	function & instance()
+    public static function &instance()
 	{
 		static $instance = NULL;
 
@@ -31,7 +31,7 @@ class Log {
 	 * @param string message to be logged
 	 * @param bool force message logging, this way you can filter messages even you have logging disabled.
 	 */
-	function msg($message, $force = FALSE)
+	public static function msg($message, $force = FALSE)
 	{
 		$obj = & Log::instance();
 
@@ -48,7 +48,7 @@ class Log {
 		}
 	}
 
-	function addRecipient($mail)
+    public static function addRecipient($mail)
 	{
 		$obj = & Log::instance();
 
@@ -62,28 +62,28 @@ class Log {
 		}
 	}
 
-	function enable()
+    public static function enable()
 	{
 		$obj = & Log::instance();
 
 		$obj->log = TRUE;
 	}
 
-	function disable()
+    public static function disable()
 	{
 		$obj = & Log::instance();
 
 		$obj->log = FALSE;
 	}
 
-	function setSubject($subject)
+    public static function setSubject($subject)
 	{
 		$obj = & Log::instance();
 
 		$obj->subject = $subject;
 	}
 
-	function send()
+    public static function send()
 	{
 		$obj = & Log::instance();
 

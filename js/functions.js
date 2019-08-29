@@ -1309,8 +1309,7 @@ function lookupRecipe(inputString)
 	if(inputString.length == 0) {
 		// Hide the suggestion box.
 		jQuery('#suggestions').hide();
-	} else { 
-		
+	} else {
 		jQuery.ajax({
 		  	type: "GET",
 	  		url: 'includes/tools/Ajax_autoComplete_Recipes.php?queryString=' +inputString	  				  	
