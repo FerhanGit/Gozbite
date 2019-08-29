@@ -1,5 +1,6 @@
 <IfModule mod_env.c>
-	SetEnv PHPRC D:\xampp\php\php.ini
+	#SetEnv PHPRC D:\xampp\php\php.ini
+	SetEnv PHPRC C:\xampp56\php\php.ini
 </IfModule>
 
 
@@ -9,7 +10,7 @@ RewriteEngine On
 
 RewriteBase /
 
-#RewriteRule ^(.*)$ http://localhost/Gozbite.Com/$1 [R=301,L]  
+#RewriteRule ^(.*)$ http://localhost/Gozbite.Com/$1 [R=301,L]
 
 #Начална Страница
 RewriteRule ^начална-страница,([^-]*)\.html$ /index.php [L] 
